@@ -13,7 +13,7 @@ const Question = ({ quiz }) => {
     );
 
   const [answer, setAnswer] = useState("");
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(20);
 
   const answerChangeHandler = ({ target }) => {
     setAnswer(target.value);
