@@ -28,7 +28,7 @@ const Question = ({ quiz }) => {
     dispatch(quizActions.checkAnswer({ quiz, answer: parseFloat(answer) }));
     setAnswer("");
     dispatch(quizActions.setQuestion({ quiz }));
-    setTimer(5);
+    setTimer(20);
     dispatch(quizActions.setLoading({ quiz, bool: false }));
   };
 
@@ -39,7 +39,7 @@ const Question = ({ quiz }) => {
     dispatch(quizActions.setLoading({ quiz, bool: true }));
     dispatch(quizActions.checkAnswer({ quiz, answer: parseFloat(answer) }));
     dispatch(quizActions.setQuestion({ quiz }));
-    setTimer(5);
+    setTimer(20);
     dispatch(quizActions.setLoading({ quiz, bool: false }));
   }, [quiz, dispatch, isComplete, answer]);
 
@@ -51,7 +51,7 @@ const Question = ({ quiz }) => {
       nextQuestionHandler();
     }
     const interval = setInterval(() => {
-      setTimer((timer) => (timer === 0 ? 5 : timer - 1));
+      setTimer((timer) => (timer === 0 ? 20 : timer - 1));
     }, 1000);
     return () => clearInterval(interval);
   }, [nextQuestionHandler, timer, isComplete]);
