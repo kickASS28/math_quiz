@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react";
+import classes from "./App.module.css";
+import Quiz from "./components/Quiz/Quiz";
+import CommulitiveScoreBoard from "./components/UI/CommulitiveScoreBoard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <CommulitiveScoreBoard />
+      <main className={classes.app}>
+        <h1 className={classes.app_heading}>Let's Master Maths Togather!</h1>
+        <div className={classes.quiz_container}>
+          <Quiz quizName="quiz1" number={1} />
+          <Quiz quizName="quiz2" number={2} />
+        </div>
+      </main>
+    </Fragment>
   );
 }
 

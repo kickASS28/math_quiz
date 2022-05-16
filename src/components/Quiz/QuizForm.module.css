@@ -1,0 +1,131 @@
+.form {
+  color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputField,
+.actions {
+  background-color: var(--accent);
+  padding: 1rem;
+  border-radius: var(--borderradius);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.3rem;
+}
+
+.inputField input {
+  border: none;
+  border-bottom: 2px solid var(--primary);
+  padding: 0.25rem 0;
+}
+
+.inputField input:focus,
+.inputField input:active {
+  outline: none;
+}
+
+.minmax {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.minmax .inputField {
+  width: 40%;
+}
+
+.operators {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.operator {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.actions input {
+  border: none;
+  background-color: var(--primary);
+  padding: 0.5rem;
+  color: var(--accent);
+  font-size: medium;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  border-radius: var(--borderradius);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.actions input:hover,
+.actions input:active {
+  background-color: var(--primarydark);
+}
+
+.error_container {
+  text-align: center;
+  background-color: var(--accent);
+  border-radius: var(--borderradius);
+  padding: 0.25rem;
+}
+
+.error_text {
+  display: inline;
+  font-size: small;
+  color: red;
+  margin: 0;
+  letter-spacing: 1.1px;
+}
+
+@media screen and (max-width: 1350px) {
+  .operators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+  .operator {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .minmax {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .minmax .inputField {
+    width: 90%;
+  }
+  .operators {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .minmax {
+    flex-direction: row;
+  }
+  .minmax .inputField {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .minmax .inputField {
+    width: 35%;
+  }
+}

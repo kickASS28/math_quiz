@@ -1,0 +1,40 @@
+.scorecard_container {
+  background-color: var(--accent);
+  color: var(--background);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: var(--borderradius);
+}
+
+.scorecard_container h4 {
+  margin: 0;
+  font-size: large;
+  letter-spacing: 0.5px;
+}
+
+.table {
+  width: 90%;
+  margin: 0.25rem auto;
+  border-radius: var(--borderradius);
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.25rem;
+  border: 1px solid var(--background);
+}
+
+.table th {
+  background-color: var(--primary);
+  color: var(--accent);
+}
+
+.row_correct {
+  background-color: rgb(183, 255, 183);
+}
+
+.row_wrong {
+  background-color: rgb(255, 168, 168);
+}
