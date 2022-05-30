@@ -6,6 +6,7 @@ import CommulitiveScoreBoard from "./components/UI/CommulitiveScoreBoard";
 function App() {
   return (
     <Fragment>
+      <h1 className={classes.app_heading}>Quizimenia</h1>
       <CommulitiveScoreBoard />
       <main className={classes.app}>
         <h1 className={classes.app_heading}>Let's Master Maths Togather!</h1>
